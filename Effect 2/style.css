@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    background-image: linear-gradient(#4158D0,#C850C0,#FFCC70);
+}
+.container{
+    border: 2px solid white;
+    position: relative;
+    z-index:2;
+    /* overflow: hidden; */
+}
+P{
+    position: absolute;
+    bottom: 10px;
+    left:40%;
+    z-index: 1;
+    font-size: 23px;
+    font-family: sans-serif;
+    color: blueviolet;
+}
+.card{
+height: 20rem;
+width: 20rem;
+border: 2px solid red;
+z-index: 3;
+position: relative;
+overflow: hidden;
+background-color: white;
+border: 5px solid   white;
+
+/* border: 10px solid black; */
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    transition: ease 1s;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+
+}
+.container:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    transition: 1s;
+    background-color: white;
+    z-index: -1;
+    
+}
+.container:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    transition: 1s;
+    background-color: white;
+    z-index: -1;
+}
+.container:hover:before{
+    transform: rotate(20deg);
+}
+.container:hover:after{
+    transform: rotate(10deg);
+}
+img:hover{
+    transform: translateY(-40px);
+}
+
